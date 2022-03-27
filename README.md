@@ -14,15 +14,27 @@
 
  ## ***Technologies***
  ![Image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cmarix.com%2Fblog%2Fwp-content%2Fuploads%2F2019%2F09%2FMern.jpg&f=1&nofb=1)
+  &nbsp;
 *Also utilizing Mongoose ODM library for MonogDB.
 
 ## ** Homepage Screenshot**
-[Image](./assets/medici-mockup.png))
+![Image](./assets/medici-mockup.png))
 
-## **Instructions for Developers**
+## **Instructions for Developers (for local use)**
 * Fork and clone this repo
 * Navigate to project folder
+  * client folder - install depencenies^ and enter npm run start in terminal
+  * server folder - install dependencies^ and enter npm run dev in terminal
 * Open index.html
+
+*Front-end Dependencies:
+   * npm i react-router-dom
+
+*Back-end Dependencies:
+   *npm i nodemon
+   *npm i morgan
+   *npm i express mongoose
+
   
 
 
