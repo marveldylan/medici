@@ -17,7 +17,7 @@
 
 
 ## **Homepage Screenshot**
-![Image](./assets/medici-mockup.png))
+![Image](./assets/medici-mockup.png)
 
 ## **Instructions for Developers (for local use)**
 * Fork and clone this repo
@@ -55,4 +55,4 @@
 ### **ASSET MOCK-UPS BUILT WITH: [GRAVIT](https://www.designer.io/en/)**
 ### **ERD AND COMPONENT HIERARCHY DIAGRAM CREATED WITH: [Lucidchart](https://www.lucidchart.com/pages/)**
 ### **David Image: [duckduckgo search](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.pngguru.com%2Fpreview%2F841%2F447%2F599%2Fs-008-aesthetic-png-clipart.jpg&f=1&nofb=1)**
-### **MERN Stack Image: [duckduckgo search](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cmarix.com%2Fblog%2Fwp-content%2Fuploads%2F2019%2F09%2FMern.jpg&f=1&nofb=1))**
+### **MERN Stack Image: [duckduckgo search](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cmarix.com%2Fblog%2Fwp-content%2Fuploads%2F2019%2F09%2FMern.jpg&f=1&nofb=1)**
