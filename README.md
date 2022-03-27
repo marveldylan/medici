@@ -9,7 +9,7 @@
  ***
 
  ## ***DESCRIPTION***
- ### Medici is an up-and-coming NFT marketplace with a minimal aesthetic and easy-to-use UI experience. Medici focuses on enhanced storefront customization opportunities for sellers, along with a sleek profile design for users to show off their favorite NFts! Medici's contemporary layout allows for novel ways to display NFT collections, such as a Featured Items pane and more.
+ ### Medici is an up-and-coming NFT marketplace with a minimal aesthetic and easy-to-use UI experience. Medici focuses on enhanced storefront customization opportunities for sellers, along with a sleek profile design for users to show off their favorite NFTs! Medici's contemporary layout allows for novel ways to display NFT collections, such as a Featured Items pane and more.
  &nbsp;
 
  ## ***Technologies***
@@ -26,13 +26,13 @@
   * server folder - install dependencies^ and enter npm run dev in terminal
 * Open index.html
 
-*Front-end Dependencies:
+* Front-end Dependencies:
    * npm i react-router-dom
 
-*Back-end Dependencies:
-   *npm i nodemon
-   *npm i morgan
-   *npm i express mongoose
+*B ack-end Dependencies:
+   * npm i nodemon
+   * npm i morgan
+   * npm i express mongoose
 
   
 
