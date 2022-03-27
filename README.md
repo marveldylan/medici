@@ -14,10 +14,9 @@
 
  ## ***Technologies***
  ![Image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.cmarix.com%2Fblog%2Fwp-content%2Fuploads%2F2019%2F09%2FMern.jpg&f=1&nofb=1)
-  &nbsp;
-*Also utilizing Mongoose ODM library for MonogDB.
 
-## ** Homepage Screenshot**
+
+## **Homepage Screenshot**
 ![Image](./assets/medici-mockup.png))
 
 ## **Instructions for Developers (for local use)**
