@@ -29,7 +29,7 @@
 * Front-end Dependencies:
    * npm i react-router-dom
 
-*B ack-end Dependencies:
+*Back-end Dependencies:
    * npm i nodemon
    * npm i morgan
    * npm i express mongoose
@@ -40,7 +40,7 @@
 ## ***Future Updates***
 - [X] ~~Submit README.md~~
 - [ ] Display Shop Collection - Read functionality
-- [ ] Display Shop Reviews Collection - Full CRUD functionality
+- [ ] Display Shop Reviews Collection - Create and Read functionality
 - [ ] Display NFT Collection - Full CRUD functionality
 - [ ] Stretch Goal: Display NFT Series ( larger collections of NFTs)
 - [ ] Stretch Goal: Implement prototype user login and exchanging of items to wallet
