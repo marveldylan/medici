@@ -106,6 +106,21 @@
   margin: 25px auto;
   box-shadow: 0px 20px 40px 15px rgba(0,0,0,0.05);
 }
+
+.viewport {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.viewport:hover {
+  /* add some cool parallax */
+}
+
+.default-image {
+  width: 77%;
+  height: auto;
+}
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
