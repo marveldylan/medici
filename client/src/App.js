@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Landing from './components/Landing';
 import Nav from './components/Nav';
+import Landing from './components/Landing';
+import About from './components/About';
+import Profile from './components/Profile';
+import ConnectWallet from './component/ConnectWallet';
 import './App.css';
 
 const App = () => {
@@ -13,6 +16,9 @@ const App = () => {
       <div className="landing-page">
         <Routes >
           <Route path="/" element={ <Landing /> } />
+          <Route path="/about" element={ <About />} />
+          <Route path="/profile" element={ <Profile />} />
+          <Route path="/connect-wallet" element={ <ConnectWallet /> } />
         </Routes>
       </div>
     </div>
