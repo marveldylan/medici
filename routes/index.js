@@ -8,13 +8,14 @@ const nftController = require('../controllers/NFT')
 router.get('/shops', shopController.getShops)
 
 // reviews create and read routes:
-router.post('/shops/reviews/:id', reviewController.createReview)
-router.get('/shops/reviews/:id', reviewController.getReviews)
+router.post('/reviews', reviewController.createReview)
+router.get('/reviews', reviewController.getReviews)
 
 // nfts create, read, update, delete routes:
-router.post('/shops/nfts', nftController.createNFT)
-router.get('/shops/nfts', nftController.getNFTs)
-router.put('/shops/nfts', nftController.updateNFT)
-router.delete('/shops/nfts', nftController.deleteNFT)
+router.post('/nfts', nftController.createNFT)
+router.get('/nfts', nftController.getNFTs)
+router.get('/nfts/:id', nftController.getNftById)
+router.put('/nfts/:id', nftController.updateNFT)
+router.delete('/nfts/:id', nftController.deleteNFT)
 
 module.exports = router;
