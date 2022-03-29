@@ -1,8 +1,17 @@
+import LeftSidebar from './LeftSidebar';
+import Featured from './Featured';
+import ViewPort from './ViewPort';
+import RightSidebar from './RightSidebar';
+import TopCollections from './TopCollections';
 
 
 const Landing = () => {
     return(
-        <h1>Landing is linked</h1>
+        <div className="landing-page">
+            <LeftSidebar />
+            <ViewPort />
+            <RightSidebar />
+        </div>
     )
 }
 
