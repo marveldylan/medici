@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Landing from './components/Landing';
 import About from './components/About';
 import Profile from './components/Profile';
-import ConnectWallet from './component/ConnectWallet';
+import ConnectWallet from './components/ConnectWallet';
 import './App.css';
 
 const App = () => {

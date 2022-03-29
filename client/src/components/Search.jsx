@@ -3,7 +3,9 @@
 const Search = () => {
 
     return (
-        <h3>Search Connected</h3>
+        <div className="search-container">
+            <input type='text' className="search-bar" placeholder="Looking for something?" />
+        </div>
     )
 }
 

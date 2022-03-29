@@ -3,7 +3,9 @@ const Create = () => {
 
 
     return (
-        <h3>Create Connected</h3>
+        <div className="create-container">
+            <button className="create-btn">Create</button>
+        </div>
     )
 }
 
