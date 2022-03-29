@@ -1,4 +1,4 @@
-const NFT = require('../models/nft')
+const { NFT } = require('../models')
 
 const createNFT = async (req, res) => {
     console.log(req.body)

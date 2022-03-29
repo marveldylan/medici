@@ -3,7 +3,9 @@
 const ViewPort = () => {
 
     return (
-        <h3>ViewPort Connected</h3>
+        <div className="viewport">
+
+        </div>
     )
 }
 

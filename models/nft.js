@@ -6,10 +6,10 @@ const NFT = new Schema(
         name: { type: String, required: true },
         image: { type: String, required: true },
         price: { type: Number, required: true },
-        description: { type: String, required: true }
+        description: { type: String, required: true },
+        shop_id: { type: Schema.Types.ObjectId, ref: 'shop_id' }
     },
     { timestamps: true },
 )
 
 module.exports = NFT
-// module.exports = mongoose.model('nfts', NFT)

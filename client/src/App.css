@@ -99,7 +99,7 @@
 .right-sidebar{
   width: 80%;
   display: grid;
-  grid-template: 65px 1fr 1fr 1fr 1fr 30px / 1fr 1fr;
+  grid-template: 65px 1fr 1fr 1fr 30px;
   text-align: center;
   background-image: linear-gradient(#FFF, #fbfbfb, #FFF);
   border-radius: 1em;
