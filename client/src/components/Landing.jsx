@@ -3,6 +3,7 @@ import Featured from './Featured';
 import ViewPort from './ViewPort';
 import RightSidebar from './RightSidebar';
 import TopCollections from './TopCollections';
+import Banner from './Banner';
 
 
 const Landing = () => {
@@ -11,6 +12,7 @@ const Landing = () => {
             <LeftSidebar />
             <ViewPort />
             <RightSidebar />
+            <Banner />
         </div>
     )
 }

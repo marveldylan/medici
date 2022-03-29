@@ -6,7 +6,7 @@ const ViewPort = () => {
 
     return (
         <div className="viewport">
-             <img class="default-image" src={ defaultImage } alt="cant find it" />
+             <img className="default-image" src={ defaultImage } alt="cant find it" />
         </div>
     )
 }

@@ -3,7 +3,9 @@
 const Banner = () => {
 
         return (
-            <h1>MEDICI</h1>
+            <div className = "banner-scroll">
+                <h1>Medici</h1>
+            </div>
         )
 }
 
