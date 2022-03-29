@@ -1,11 +1,18 @@
-
-
+import TopCollections from './TopCollections';
 
 
 const RightSidebar = () => {
 
     return (
-        <h3>RightSidebar Connected</h3>
+        <div className="right-sidebar">
+        <div className="top-collections-header">
+
+        </div>
+        <TopCollections />
+        <div className="top-collections-footer">
+            
+        </div>
+    </div>
     )
 }
 

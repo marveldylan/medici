@@ -1,9 +1,17 @@
-
+import Featured from './Featured';
 
 const LeftSidebar = () => {
 
     return (
-        <h3>LeftSidebar Connected</h3>
+       <div className="left-sidebar">
+           <div className="featured-header">
+
+           </div>
+           <Featured />
+           <div className="featured-footer">
+               
+           </div>
+       </div>
     )
 }
 
