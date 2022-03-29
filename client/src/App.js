@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
+import Landing from './components/Landing';
 import Nav from './components/Nav';
 import './App.css';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <header className="app-header">
         <Nav />
       </header>
-      <div className="Home">
+      <div className="landing-page">
         <Routes >
-          <Route path="/" element={ <Home /> } />
+          <Route path="/" element={ <Landing /> } />
         </Routes>
       </div>
     </div>
