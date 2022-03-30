@@ -6,6 +6,7 @@ import About from './components/About';
 import Profile from './components/Profile';
 import ConnectWallet from './components/ConnectWallet';
 import Creator from './components/Creator';
+import NFTDetails from './components/NFTDetails';
 import './App.css';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/profile" element={ <Profile />} />
           <Route path="/connect-wallet" element={ <ConnectWallet /> } />
           <Route path="/create" element={ <Creator /> } />
+          <Route path="/nft/:id" element={ <NFTDetails /> } />
         </Routes>
     </div>
   );

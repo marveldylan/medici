@@ -3,7 +3,9 @@
 const About = () => {
 
     return (
-        <h3>About Connected</h3>
+        <div className="coming-soon">
+            <p>Whoops! It looks like this feature has not yet been implemented. Check back here soon!</p>
+        </div>
     )
 }
 

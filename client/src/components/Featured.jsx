@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Featured = () => {
 
@@ -24,9 +25,15 @@ const Featured = () => {
                     console.log(nft)
                     return(
                         <div className="featured-item" key={ nft._id } onClick={() => nftDetails(nft)}>
-                            <p className="nft-name">{ nft.name }</p>
-                            <p className="nft-price">{ nft.price } ETH</p>
-                            <img className="nft-image" src={nft.image} alt={`can't display image`} />
+                            <div className="featured-name-container">
+                                <p className="nft-name">{ nft.name }</p>
+                            </div>
+                            <div className="featured-price-container">
+                                <p className="nft-price">{ nft.price } ETH</p>
+                            </div>
+                            <div className="featured-image-container">
+                                <img className="nft-image" src={nft.image} alt={`can't display image`} />
+                            </div>
                         </div>
                     )
                 })

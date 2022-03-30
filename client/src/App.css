@@ -44,17 +44,41 @@
   color: #acacac;
 }
 
+.search-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  justify-content: center;
+  align-items: center;
+}
 .search-bar {
   padding: 10px;
   padding-left: 15px;
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin: 70px auto 0px auto;
+  margin-top: 40px;
+  width: 93%;
   color: #8a8a8a;
   border-radius: 1.3em;
   border-style: none;
   box-shadow: 0px 10px 30px 10px rgba(0,0,0,0.05);
+}
+
+.search-button {
+  padding: 10px 5px 10px 5px;
+  margin-top: 40px;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  background-color: white;
+  border-radius: 1.3em;
+  color: #8a8a8a;
+  border-style: none;
+  box-shadow: 0px 10px 30px 10px rgba(0,0,0,0.05);
+}
+
+.search-button:hover {
+  background-color: rgba(89, 247, 194, 0.5);
+  color: white;
+  box-shadow: 0px 2px 5px 3px rgba(16, 209, 145, 0.15);
 }
 
 ::placeholder {
@@ -85,6 +109,12 @@
 
 }
 
+.create-btn:hover {
+  background-color: rgba(89, 215, 247, 0.5);
+  color: white;
+  box-shadow: 0px 2px 5px 3px rgba(16, 180, 209, 0.15);
+}
+
 .left-sidebar {
   width: 80%;
   display: grid;
@@ -108,7 +138,6 @@
 .featured-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  border: 2px solid black;
 }
 
 .featured-footer {
@@ -119,6 +148,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border-bottom: 1px solid #e4e4e4;
+}
+
+.featured-name-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
 }
 
 .nft-name {
@@ -151,6 +187,18 @@
   align-items: center;
 }
 
+.coming-soon {
+  width: 93.4%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#FFF, #fbfbfb, #FFF);
+  border-radius: 1em;
+  margin: 25px auto;
+  box-shadow: 0px 20px 40px 15px rgba(0,0,0,0.05);
+}
+
 /* .viewport:hover {
   add some cool parallax
 } */
@@ -162,7 +210,7 @@
 }
 
 .banner-scroll {
-  width: 93.5%;
+  width: 93.4%;
   margin: 0 auto;
   border-radius: 0.5em;
   display: grid;

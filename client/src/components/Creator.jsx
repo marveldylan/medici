@@ -3,7 +3,9 @@
 const Creator = () => {
 
     return (
-        <h1>Creator Page Linked</h1>
+        <div className="coming-soon">
+            <p>Whoops! It looks like this feature has not yet been implemented. Check back here soon!</p>
+        </div>
     )
 }
 
