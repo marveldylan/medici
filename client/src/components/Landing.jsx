@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import LeftSidebar from './LeftSidebar';
 import Featured from './Featured';
 import ViewPort from './ViewPort';
@@ -7,11 +8,19 @@ import Banner from './Banner';
 
 
 const Landing = () => {
+
+    const [nft, setNFT] = useState(null)
+
+    useEffect(() => {
+        setNFT(null)
+    }, [])
+
+
     return(
         <div className="landing-page">
-            <LeftSidebar />
+            <LeftSidebar nft={ nft }/>
             <ViewPort />
-            <RightSidebar />
+            <RightSidebar nft={ nft }/>
             <Banner />
         </div>
     )

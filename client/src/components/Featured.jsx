@@ -24,7 +24,6 @@ const Featured = () => {
         <div className="featured-container">
             {
                 featNFTs.map((nft) => {
-                    console.log(nft)
                     return(
                         <div className="featured-item" key={ nft._id } onClick={() => nftDetails(nft)}>
                             <div className="featured-name-container">
