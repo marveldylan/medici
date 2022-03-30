@@ -11,8 +11,10 @@ const Featured = () => {
         setFeatured(res.data.nfts)
     }
 
+    let navigate = useNavigate();
+
     const nftDetails = (nft) => {
-        console.log(nft._id)
+        navigate(`/nft/${nft._id}`)
     }
     useEffect(() => {
         getFeatured();
