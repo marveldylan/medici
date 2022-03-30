@@ -22,6 +22,17 @@ const Featured = () => {
 
     return (
         <div className="featured-container">
+            <div className="featured-header">
+            <div className="featured-head-name">
+                <p>Name:</p>
+            </div>
+            <div className="featured-head-price">
+                <p>Price:</p>
+            </div>
+            <div className="featured-head-preview">
+                <p>Preview:</p>
+            </div>
+            </div>
             {
                 featNFTs.map((nft) => {
                     return(

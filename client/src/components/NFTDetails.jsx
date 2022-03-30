@@ -25,10 +25,7 @@ const NFTDetails = () => {
         <div className="landing-page">
             <LeftSidebar nft = { selectedNFT } />
             <div className="nft-details">
-                <h1>{ selectedNFT.name }</h1>
                 <img className="nft-details-image" src={selectedNFT.image} alt="can't display image" />
-                <h3>Price: { selectedNFT.price } Eth</h3>
-                <h4>Description: { selectedNFT.description }</h4>
             </div>
             <RightSidebar nft = { selectedNFT } />
             <Banner />

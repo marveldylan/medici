@@ -1,5 +1,5 @@
 import Featured from './Featured';
-import ShopDetails from './ShopDetails';
+import NFTInfo from './NFTInfo';
 import { useNavigate } from 'react-router-dom';
 
 const LeftSidebar = (props) => {
@@ -10,9 +10,9 @@ const LeftSidebar = (props) => {
         navigate(`/`)
     }
     return (
-       <div className="left-sidebar">
+       <div className="sidebar">
            <div></div>
-           <div className="left-header" onClick={() => landing()}>
+           <div className="sidebar-header" onClick={() => landing()}>
                 {
                 props.nft !== null ?
                     <p>Back To Featured</p>
@@ -23,12 +23,12 @@ const LeftSidebar = (props) => {
            <div></div>
            {
             props.nft !== null ?
-            <ShopDetails nft={props.nft} />
+            <NFTInfo nft={props.nft} />
             : <Featured nft={props.nft} />
            }
 
            <div></div>
-           <div className="left-footer">
+           <div className="sidebar-footer">
            </div>
        </div>
     )
