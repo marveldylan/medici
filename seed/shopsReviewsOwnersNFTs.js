@@ -67,11 +67,32 @@ const createReviews = async () => {
 }
 
 const createOwners = async () => {
+    const battleDucks = await Shop.find({ name: 'BATTLEDUCKS'})
+    const robotz = await Shop.find({ name: 'robotZ'})
+    const dullChimps = await Shop.find({ name: 'Dull Chimp Boat Frat'})
+
     const owners = [
         {
+            _id: '77',
             name: 'Dylan Marvel',
             profile_image: 'https://media-exp1.licdn.com/dms/image/D4D03AQEaryWMxklntQ/profile-displayphoto-shrink_200_200/0/1648671159140?e=1654128000&v=beta&t=JvpwzF7aYOGA00g4jpEfjspIkSlkj_-3tImzB_YM5Gg'
-        }
+        },
+        {
+            _id: battleDucks[0]._id,
+            name: battleDucks[0].name,
+            profile_image: battleDucks[0].profile_image
+        },
+        {
+            _id: robotz[0]._id,
+            name: robotz[0].name,
+            profile_image: robotz[0].profile_image
+        },
+        {
+            _id: dullChimps[0]._id,
+            name: dullChimps[0].name,
+            profile_image: dullChimps[0].profile_image
+        },
+
     ]
     await Owner.create(owners);
     console.log('Created an owner!');
