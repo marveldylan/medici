@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const Owner = new Schema(
     {
-        _id: {type: String, required: true},
+        _id: {type: Schema.Types.ObjectId, required: true},
         name: { type: String, required: true },
         profile_image: { type: String, required: true }
     },

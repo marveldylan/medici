@@ -2,19 +2,19 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ShopNFTs = (props) => {
-    const [shopNFTs, setNFTs] = useState([])
+const UserNFTs = (props) => {
+    const [userNFTs, setNFTs] = useState([])
 
     const getNFTs= async () => {
         const res = await axios.get('http://localhost:3001/nfts')
         let selectedNFTs = []
         res.data.nfts.forEach((nft) => {
-            if(nft.owner_id === props.shop._id) {
+            if(nft.owner_id === props.owner._id) {
                 selectedNFTs.push(nft)
             }
         })
         setNFTs(selectedNFTs)
-        console.log(shopNFTs)
+        console.log(userNFTs)
     }
 
     let navigate = useNavigate();
@@ -28,9 +28,9 @@ const ShopNFTs = (props) => {
     }, [props])
 
     return (
-        <div className="shop-nft-container">
+        <div className="user-nft-container">
             {
-                shopNFTs.map((nft) => {
+                userNFTs.map((nft) => {
                     return(
                         <div className="shop-nft-item" key={ nft._id } onClick={() => nftDetails(nft)}>
                             <img className="nft-image" src={nft.image} alt={`can't display image`} />
@@ -38,7 +38,7 @@ const ShopNFTs = (props) => {
                                 <p className="nft-name">{ nft.name }</p>
                             </div>
                             <div className="nft-price-container">
-                                <p className="nft-price">{ nft.price } ETH</p>
+                                <p className="nft-description">{ nft.description }</p>
                             </div>
                         </div>
                     )
@@ -47,4 +47,5 @@ const ShopNFTs = (props) => {
         </div>
     )
 }
-export default ShopNFTs;
+
+export default UserNFTs;

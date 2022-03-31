@@ -1,3 +1,4 @@
+const { default: mongoose } = require('mongoose')
 const { NFT } = require('../models')
 
 const createNFT = async (req, res) => {
