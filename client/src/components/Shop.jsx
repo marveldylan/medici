@@ -23,17 +23,18 @@ const Shop = () => {
     }, [])
 
     return (
-        <div className="component-container">
+        <div className="shop-layout">
             <div className="shop-image" style={{ backgroundImage: `url(${selectedShop.cover_image})`}}>
                 <img className="profile-image" src={selectedShop.profile_image} />
             </div>
             <div className="shop-header">
-                <p>{selectedShop.name}</p>
                 <p>Rank: {selectedShop.rank}</p>
+                <p>{selectedShop.name}</p>
                 <p>{selectedShop.description}</p>
             </div>
             <div className="shop-content">
-
+                <ShopNFTs shop = { selectedShop } />
+                <ShopReviews shop = { selectedShop } />
             </div>
         </div>
     )
