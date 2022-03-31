@@ -6,6 +6,7 @@ const nftController = require('../controllers/NFT')
 
 // shops read route:
 router.get('/shops', shopController.getShops)
+router.get('/shops/:id', shopController.getShopById)
 
 // reviews create and read routes:
 router.post('/reviews', reviewController.createReview)

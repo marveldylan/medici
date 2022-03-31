@@ -10,6 +10,7 @@ import Banner from './Banner';
 const Landing = () => {
 
     const [nft, setNFT] = useState(null)
+    const [shops, setShops] = useState([])
 
     useEffect(() => {
         setNFT(null)
@@ -20,7 +21,7 @@ const Landing = () => {
         <div className="landing-page">
             <LeftSidebar nft={ nft }/>
             <ViewPort />
-            <RightSidebar nft={ nft }/>
+            <RightSidebar nft={ nft } shops={ shops }/>
             <Banner />
         </div>
     )
