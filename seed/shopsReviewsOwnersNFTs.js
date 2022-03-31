@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Shop, Review, NFT } = require('../models')
+const { Shop, Review, NFT, Owner } = require('../models')
 
 // Connect to the database
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -66,6 +66,18 @@ const createReviews = async () => {
     return reviews;
 }
 
+const createOwners = async () => {
+    const owners = [
+        {
+            name: 'Dylan Marvel',
+            profile_image: 'https://media-exp1.licdn.com/dms/image/D4D03AQEaryWMxklntQ/profile-displayphoto-shrink_200_200/0/1648671159140?e=1654128000&v=beta&t=JvpwzF7aYOGA00g4jpEfjspIkSlkj_-3tImzB_YM5Gg'
+        }
+    ]
+    await Owner.create(owners);
+    console.log('Created an owner!');
+    return owners;
+}
+
 const createNFTs = async () => {
 
     const battleDucks = await Shop.find({ name: 'BATTLEDUCKS'})
@@ -78,21 +90,28 @@ const createNFTs = async () => {
             image: 'https://i.imgur.com/83OmhBW.png',
             price: 0.5,
             description: ' Test Description 1',
-            shop_id: battleDucks[0]._id
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: true
+
         },
         {
             name: 'Test NFT 2',
             image: 'https://i.imgur.com/FPTcVj9.png',
             price: 1.5,
             description: ' Test Description 2',
-            shop_id: robotz[0]._id
+            shop_id: robotz[0]._id,
+            owner_id: robotz[0]._id,
+            featured: true
         },
         {
             name: 'Test NFT 3',
             image: 'https://i.imgur.com/toYd9dP.png',
             price: 10,
             description: ' Test Description 3',
-            shop_id: dullChimps[0]._id
+            shop_id: dullChimps[0]._id,
+            owner_id: dullChimps[0]._id,
+            featured: true
         }
     ]
     await NFT.insertMany(nfts);
@@ -104,6 +123,7 @@ const createNFTs = async () => {
 const run = async () => {
     await createShops();
     await createReviews();
+    await createOwners();
     await createNFTs();
     db.close()
 }
