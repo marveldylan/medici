@@ -17,14 +17,30 @@ const NFTActions = (props) => {
         navigate('/Profile')
     }
 
+    const deleteNow = async () => {
+        const res = await axios.delete(`http://localhost:3001/nfts/${id}`)
+        navigate('Profile')
+    }
+
     return (
-        <div className="nft-actions-container">
-            <div className="price-container">
-                <p className="buy-price">Price: {props.nft.price} Eth</p>
+        <div>
+            { 
+            props.owner._id === props.nft.owner_id ?
+            <div className="nft-actions-container">
+                <div className="delete-container">
+                    <p className="delete-nft-text" onClick={()=>deleteNow()}>Delete NFT </p>
+                </div>
+            </div>    
+            :
+            <div className="nft-actions-container">
+                <div className="price-container">
+                    <p className="buy-price">Price: {props.nft.price} Eth</p>
+                </div>
+                <div className="buy-container" onClick={()=>buyNow()}>
+                    <p className="buy-nft-text">Buy Now</p>
+                </div>
             </div>
-            <div className="buy-container" onClick={()=>buyNow()}>
-                <p className="buy-nft-text">Buy Now</p>
-            </div>
+            }
         </div>
     )
 }

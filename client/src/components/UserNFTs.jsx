@@ -32,12 +32,11 @@ const UserNFTs = (props) => {
             {
                 userNFTs.map((nft) => {
                     return(
-                        <div className="shop-nft-item" key={ nft._id } onClick={() => nftDetails(nft)}>
+                        <div className="user-nft-item" key={ nft._id } onClick={() => nftDetails(nft)}>
                             <img className="nft-image" src={nft.image} alt={`can't display image`} />
-                            <div className="nft-name-container">
-                                <p className="nft-name">{ nft.name }</p>
-                            </div>
-                            <div className="nft-price-container">
+                            <p className="user-nft-name">{ nft.name }</p>
+                            <div className="overlay">
+                                <p className="nft-name-overlay">{ nft.name }</p>
                                 <p className="nft-description">{ nft.description }</p>
                             </div>
                         </div>
