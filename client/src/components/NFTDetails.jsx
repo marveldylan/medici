@@ -8,7 +8,6 @@ import Banner from "./Banner";
 const NFTDetails = () => {
 
     const [selectedNFT, setNFT ] = useState({})
-    const [ nfts, setNFTs ] = useState([])
 
     let { id } = useParams()
 
@@ -19,6 +18,9 @@ const NFTDetails = () => {
 
     useEffect(() => {
         getNFT();
+        return(()=>{
+            setNFT({})
+        })
     }, [])
 
     return (

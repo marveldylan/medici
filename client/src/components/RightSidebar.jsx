@@ -1,25 +1,24 @@
 import TopCollections from './TopCollections';
-import ShopDetails from './ShopDetails';
+// import ShopDetails from './ShopDetails';
 
 
 const RightSidebar = (props) => {
+
+    // props.nft !== null ?
+    // <ShopDetails nft= { props.nft } />
+    // :
+    // props.nft !== null ?
+    // <p>Shop Information</p>
+    // : 
     return (
         <div className="sidebar">
             <div></div>
             <div className="sidebar-header">
-                {
-                props.nft !== null ?
-                    <p>Shop Information</p>
-                    : <p>Top Collections</p>
-                }
+                <p>Top Collections</p>
             </div>
             <div></div>
             <div></div>
-                {
-                props.nft !== null ?
-                    <ShopDetails nft= { props.nft } />
-                    : <TopCollections />
-                }
+                <TopCollections />           
             <div></div>
             <div></div>
             <div className="sidebar-footer">

@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Shop from './Shop';
 
 const ShopDetails = (props) => {
-    
-    console.log(props.nft)
 
     const [shopId, setShopId] = useState('');
     const [shops, setShops] = useState([]);
@@ -15,15 +14,18 @@ const ShopDetails = (props) => {
 
     let navigate = useNavigate();
 
-    const setSelectedShop = () => {
-        setShopId(props.nft.shop_id)
+    const setSelectedShop = async () => {
+        await setShopId(props.nft.shop_id)
     }
 
-    const updateCurrentShop = (shops) =>{
-        let currentShop = shops.find(
+    const updateCurrentShop = async (shops) =>{
+        console.log(shopId)
+        let currentShop = await shops.find(
             (shop) => shop._id === shopId
         )
-        console.log(`current shop ${currentShop.name}`)
+        console.log(`currentShop: ${currentShop.name}`)
+        console.log(`shop: ${shop}`)
+        // setShop(currentShop)
     } 
 
     const getShops = async () => {
@@ -37,10 +39,12 @@ const ShopDetails = (props) => {
     }
 
     useEffect( async ()=> {
-        await getShops();
+         await getShops();
         updateCurrentShop(shops);
         return(()=>{
-            setShopId('')
+            setShopId('');
+            setShop({});
+            setShops([]);
         })
     }, [props, shopId])
 
@@ -48,7 +52,7 @@ const ShopDetails = (props) => {
 
     return (
         <div className="shop-info" onClick={()=> shopPage()}>
-            <h1>Test</h1>
+            <h1>{shop.name}</h1>
         </div>
     )
 }

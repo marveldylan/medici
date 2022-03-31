@@ -195,6 +195,22 @@
   justify-content: left;
   align-items: center;
 }
+
+.top-collections-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.top-collections-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.shop-profile-image {
+  height: 80%;
+  width: auto;
+}
 /* 
 .nft-name {
 
@@ -246,7 +262,7 @@
   height: auto;
 }
 
-.coming-soon {
+.component-container {
   width: 93.4%;
   height: 80vh;
   display: flex;

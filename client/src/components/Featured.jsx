@@ -16,6 +16,7 @@ const Featured = () => {
     const nftDetails = (nft) => {
         navigate(`/nft/${nft._id}`)
     }
+    
     useEffect(() => {
         getFeatured();
     }, [])

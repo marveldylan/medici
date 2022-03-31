@@ -3,7 +3,7 @@
 const About = () => {
 
     return (
-        <div className="coming-soon">
+        <div className="component-container">
             <p>Whoops! It looks like this feature has not yet been implemented. Check back here soon!</p>
         </div>
     )
