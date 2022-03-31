@@ -18,7 +18,7 @@
 .landing-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 60vh 25vh;
+  grid-template-rows: 70vh 15vh;
 }
 
 .nav {
@@ -167,7 +167,7 @@
 }
 
 .featured-head-preview {
-  padding-left: 50px;
+  padding-left: 35px;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -221,16 +221,18 @@
 } */
 
 .featured-image-container {
-  padding-left: 50px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
 }
 
-.nft-image {
-  width: 60%;
-  height: auto;
+.nft-preview-image {
+  width: 75%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 .right-sidebar{
@@ -259,7 +261,10 @@
 
 .nft-details-image {
   width: 100%;
-  height: auto;
+  height: 93%;
+  border-radius: 1.5em;
+  object-fit: cover;
+  box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.03);
 }
 
 .component-container {
@@ -303,7 +308,6 @@
   display: grid;
   grid-template-rows: 100px 150px 1fr;
   width: 93.4%;
-  height: 80vh;
   background-image: linear-gradient(#FFF, #fbfbfb, #FFF);
   border-radius: 1em;
   margin: 25px auto;
@@ -311,23 +315,54 @@
 }
 
 .shop-image {
-  width: 96%;
+  width: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
   margin: 0 auto;
   background-color: gray;
 }
 
 .shop-header {
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
   background-color: black;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 15px;
 }
 
 .shop-content {
   display: grid;
   grid-template-columns: 5fr 2fr;
 }
+
+.shop-nft-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+.shop-nft-item {
+  position: relative;
+  width: 100%;
+  border-radius: 1.3em;
+  box-shadow: 0px 20px 40px 15px rgba(0,0,0,0.05);
+  height: 45vh;
+}
+
+.nft-image {
+  border-top-left-radius: 1.3em;
+  border-top-right-radius: 1.3em;
+  display: block;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.nft-actions-container {
+  background-color: black;
+}
+
+
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

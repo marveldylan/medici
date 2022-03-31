@@ -45,7 +45,7 @@ const Featured = () => {
                                 <p className="nft-price">{ nft.price } ETH</p>
                             </div>
                             <div className="featured-image-container">
-                                <img className="nft-image" src={nft.image} alt={`can't display image`} />
+                                <img className="nft-preview-image" src={nft.image} alt={`can't display image`} />
                             </div>
                         </div>
                     )

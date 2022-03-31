@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Shop from './Shop';
 
-const ShopDetails = (props) => {
+const NFTActions = (props) => {
 
     const [shopId, setShopId] = useState('');
     const [shops, setShops] = useState([]);
@@ -48,13 +48,18 @@ const ShopDetails = (props) => {
         })
     }, [props, shopId])
 
-    console.log(`shop id: ${shopId}`)
+    console.log(shopId)
 
     return (
-        <div className="shop-info" onClick={()=> shopPage()}>
-            <h1>{shop.name}</h1>
+        <div className="nft-actions-container">
+            <div className="buy-container">
+                <p className="buy-nft-text">Buy Now</p>
+            </div>
+            <div className="delete-container">
+                <p className="delete-nft-text"></p>
+            </div>
         </div>
     )
 }
 
-export default ShopDetails
+export default NFTActions
