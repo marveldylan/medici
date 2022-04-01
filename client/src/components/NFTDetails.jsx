@@ -12,7 +12,7 @@ const NFTDetails = () => {
     let { id } = useParams()
 
     const getNFT = async () => {
-        const res = await axios.get(`http://localhost:3001/nfts/${ id }`)
+        const res = await axios.get(`/nfts/${ id }`)
         setNFT(res.data.nft)
     }
 

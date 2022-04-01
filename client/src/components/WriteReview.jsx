@@ -23,7 +23,7 @@ const WriteReview = (props) => {
         }
 
     const submitReview = async () => {
-        await axios.post(`http://localhost:3001/reviews`, {
+        await axios.post(`/reviews`, {
             name: name,
             rating: rating,
             content: content,

@@ -14,7 +14,7 @@ const Creator = () => {
     let navigate = useNavigate();
 
     const getOwner = async () => {
-        const res = await axios.get('http://localhost:3001/owner/0000004d358c79bf5043adf5')
+        const res = await axios.get('/owner/0000004d358c79bf5043adf5')
         setOwner(res.data.owner)
     }
 
@@ -39,7 +39,7 @@ const Creator = () => {
 
     const createNFT = async () => {
         if(name !== '' && image !== '' && description !== '' && price !== ''){
-            await axios.post(`http://localhost:3001/nfts`, {
+            await axios.post(`/nfts`, {
                 name: name,
                 image: image,
                 description: description,

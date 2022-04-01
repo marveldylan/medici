@@ -7,7 +7,7 @@ const Featured = () => {
     const [featNFTs, setFeatured] = useState([])
 
     const getFeatured = async () => {
-        const res = await axios.get('http://localhost:3001/nfts')
+        const res = await axios.get('/nfts')
         let featuredArray = [];
         res.data.nfts.map((nft) => {
             if(nft.featured === true) {

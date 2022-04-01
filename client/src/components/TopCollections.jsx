@@ -13,7 +13,7 @@ const TopCollections = () => {
     }
 
     const getShops = async () => {
-        const res = await axios.get('http://localhost:3001/shops')
+        const res = await axios.get('/shops')
         let sortedShops = res.data.shops.sort((a, b)=> (a.rank > b.rank ? 1 : -1));
         setShops(sortedShops.slice(0, 3))
     }

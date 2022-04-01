@@ -6,7 +6,7 @@ const UserNFTs = (props) => {
     const [userNFTs, setNFTs] = useState([])
 
     const getNFTs= async () => {
-        const res = await axios.get('http://localhost:3001/nfts')
+        const res = await axios.get('/nfts')
         let selectedNFTs = []
         res.data.nfts.forEach((nft) => {
             if(nft.owner_id === props.owner._id) {

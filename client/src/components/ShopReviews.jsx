@@ -6,7 +6,7 @@ const ShopReviews = (props) => {
     const [ reviews, setReviews ] = useState([]);
 
     const getReviews= async () => {
-        const res = await axios.get('http://localhost:3001/reviews')
+        const res = await axios.get('/reviews')
         let selectedReviews = []
         res.data.reviews.forEach((review) => {
             if(review.shop_id === props.shop._id) {

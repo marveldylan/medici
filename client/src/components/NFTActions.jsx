@@ -11,12 +11,12 @@ const NFTActions = (props) => {
     console.log(props.owner._id)
 
     const buyNow = async () => {
-        const res = await axios.put(`http://localhost:3001/nfts/${id}`, { owner_id: props.owner._id })
+        const res = await axios.put(`/nfts/${id}`, { owner_id: props.owner._id })
         navigate('/Profile')
     }
 
     const deleteNow = async () => {
-        const res = await axios.delete(`http://localhost:3001/nfts/${id}`)
+        const res = await axios.delete(`/nfts/${id}`)
         navigate('Profile')
     }
 
