@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ShopNFTs from './ShopNFTs';
 import ShopReviews from './ShopReviews';
+import WriteReview from './WriteReview';
 
 const Shop = () => {
 
@@ -28,13 +29,17 @@ const Shop = () => {
                 <img className="profile-image" src={selectedShop.profile_image} />
             </div>
             <div className="shop-header">
-                <p>Rank: {selectedShop.rank}</p>
-                <p>{selectedShop.name}</p>
-                <p>{selectedShop.description}</p>
+                <p className="shop-rank">Rank: {selectedShop.rank}</p>
+                <p className="shop-name">{selectedShop.name}</p>
+                <p className="shop-description">{selectedShop.description}</p>
             </div>
             <div className="shop-content">
                 <ShopNFTs shop = { selectedShop } />
-                <ShopReviews shop = { selectedShop } />
+                <div className="reviews-container">
+                    <WriteReview shop = { selectedShop } />
+                    <ShopReviews shop = { selectedShop } />
+                </div>
+
             </div>
         </div>
     )

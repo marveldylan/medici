@@ -12,7 +12,7 @@ const Creator = () => {
     const [ nftCreated, setCreated ] = useState(false)
 
     let navigate = useNavigate();
-    
+
     const getOwner = async () => {
         const res = await axios.get('http://localhost:3001/owner/0000004d33e223a7bab70e6e')
         setOwner(res.data.owner)
@@ -38,53 +38,64 @@ const Creator = () => {
     }
 
     const createNFT = async () => {
-        await axios.post(`http://localhost:3001/nfts`, {
-            name: name,
-            image: image,
-            description: description,
-            price: price,
-            owner_id: owner._id
-          })
-          .then(function (response) {
-            setCreated(true);
-            console.log(response);
-            navigate('/Profile');
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+        if(name !== '' && image !== '' && description !== '' && price !== ''){
+            await axios.post(`http://localhost:3001/nfts`, {
+                name: name,
+                image: image,
+                description: description,
+                price: price,
+                owner_id: owner._id
+            })
+            .then(function (response) {
+                setCreated(true);
+                console.log(response);
+                navigate('/Profile');
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        } else {
+            alert(`Aloha! It looks like some information is missing. Please fill in all fields to create your NFT.`)
+        }
     }
 
     return (
-        <div className="component-container">
-            <h1>Create The Next Big Thing!</h1>
+        <div className="full-component-container">
+            <div></div>
             <div className="create-nft-form">
-            <input 
-                type="text"
-                name="name"
-                placeholder="NFT Name" 
-                onChange={(e) => handleName(e, 'num')}
-                />
-            <input 
-                type="text"
-                name="image"
-                placeholder="Image URL"
-                onChange={(e) => handleImage(e, 'num')}
-                />
-             <input 
-                type="text" 
-                name="description"
-                placeholder="Write your description!" 
-                onChange={(e) => handleDescription(e, 'num')}
-                />
-            <input 
-                type="number" 
-                name="price"
-                placeholder="Price" 
-                onChange={(e) => handlePrice(e, 'num')}
-                />
-            <button className="submit-button" type="submit" onClick={() => createNFT()}>Submit</button>
+                <h2 className="create-header">Create The Next Big Thing!</h2>
+                <input
+                    className="create-input"
+                    type="text"
+                    name="name"
+                    placeholder="NFT Name" 
+                    onChange={(e) => handleName(e, 'num')}
+                    />
+                <input
+                    className="create-input"
+                    type="text"
+                    name="image"
+                    placeholder="Image URL"
+                    onChange={(e) => handleImage(e, 'num')}
+                    />
+                <textarea
+                    className="create-input"
+                    type="text" 
+                    name="description"
+                    rows="5"
+                    placeholder="Write your description!" 
+                    onChange={(e) => handleDescription(e, 'num')}
+                    ></textarea>
+                <input
+                    className="create-input"
+                    type="number" 
+                    name="price"
+                    placeholder="Price (ETH)" 
+                    onChange={(e) => handlePrice(e, 'num')}
+                    />
+                <button className="search-button" type="submit" onClick={() => createNFT()}>S</button>
             </div>
+            <div></div>
         </div>
     )
 }
