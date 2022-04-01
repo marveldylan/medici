@@ -14,7 +14,8 @@ const TopCollections = () => {
 
     const getShops = async () => {
         const res = await axios.get('http://localhost:3001/shops')
-        setShops(res.data.shops)
+        let sortedShops = res.data.shops.sort((a, b)=> (a.rank > b.rank ? 1 : -1));
+        setShops(sortedShops.slice(0, 3))
     }
 
     useEffect(()=> {
@@ -29,6 +30,7 @@ const TopCollections = () => {
                     return(
                         <div className="top-collections-item" key={ shop._id } style={{ backgroundImage: `url(${shop.cover_image})`}} onClick={() => goToShop(shop)}>
                             <div className="top-collections-image-container">
+                                <p className="top-collections-rank">Rank: {shop.rank}</p>
                                 <img className="shop-profile-image" src={shop.profile_image} alt={`can't display image`} />
                             </div>
                         </div>

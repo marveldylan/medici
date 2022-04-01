@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Creator = () => {
 
@@ -10,7 +11,8 @@ const Creator = () => {
     const [ owner, setOwner ] = useState({})
     const [ nftCreated, setCreated ] = useState(false)
 
-
+    let navigate = useNavigate();
+    
     const getOwner = async () => {
         const res = await axios.get('http://localhost:3001/owner/0000004d33e223a7bab70e6e')
         setOwner(res.data.owner)
@@ -46,6 +48,7 @@ const Creator = () => {
           .then(function (response) {
             setCreated(true);
             console.log(response);
+            navigate('/Profile');
           })
           .catch(function (error) {
             console.log(error);

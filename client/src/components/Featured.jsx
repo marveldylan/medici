@@ -8,7 +8,13 @@ const Featured = () => {
 
     const getFeatured = async () => {
         const res = await axios.get('http://localhost:3001/nfts')
-        setFeatured(res.data.nfts)
+        let featuredArray = [];
+        res.data.nfts.map((nft) => {
+            if(nft.featured === true) {
+                featuredArray.push(nft)
+            }
+        })
+        setFeatured(featuredArray);
     }
 
     let navigate = useNavigate();
