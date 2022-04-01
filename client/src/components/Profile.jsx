@@ -7,7 +7,7 @@ const Profile = () => {
     const [owner, setOwner] = useState({})
 
     const getOwner = async () => {
-        const res = await axios.get('http://localhost:3001/owner/0000004d33e223a7bab70e6e')
+        const res = await axios.get('http://localhost:3001/owner/0000004d358c79bf5043adf5')
         setOwner(res.data.owner)
     }
 
@@ -19,7 +19,8 @@ const Profile = () => {
         <div className="profile-container">
             <UserNFTs owner = { owner } />
             <div className="user-header">
-                <img className="profile-image" src={owner.profile_image} />
+                <h2>My Profile</h2>
+                <img className="user-profile-image" src={owner.profile_image} />
                 <h3>{owner.name}</h3>
                 <h5>Wallet ID: {owner._id}</h5>
             </div>

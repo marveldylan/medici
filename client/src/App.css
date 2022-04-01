@@ -201,6 +201,10 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
+.top-collections-image-container {
+ height: 150px;
+}
+
 .top-collections-item {
   display: flex;
   justify-content: center;
@@ -209,7 +213,7 @@
 }
 
 .shop-profile-image {
-  height: 80%;
+  height: 50%;
   width: auto;
 }
 
@@ -555,6 +559,12 @@
   filter: blur(5px);
 }
 
+.nft-name {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+
+}
+
 .user-nft-name {
   margin-bottom: 5px;
   font-size: 1.2em;
@@ -576,5 +586,12 @@
   margin-top: 20px;
   border-radius: 100%;
   object-fit: cover;
+  width: auto;
+  height: 100%;
 }
 
+.user-profile-image {
+  margin-top: 20px;
+  border-radius: 100%;
+  object-fit: cover;
+}

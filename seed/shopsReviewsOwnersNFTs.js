@@ -11,21 +11,27 @@ const createShops = async () => {
         { 
             name: 'BATTLEDUCKS',
             profile_image: 'https://i.imgur.com/9sPXnwg.png',
+            cover_image: 'https://i.imgur.com/novz82q.png',
             description: `BATTLEDUCKS is a high-octane, turn-based, duck-themed card game for two players! Everyone knows that ducks are competitive creatures by nature, and we've gathered the coolest ducks around to compete in the fiery crucible that is BATTLEDUCKS!!!`,
-            rank: 2
-        },
-        {
-            name: 'robotZ',
-            profile_image: 'test',
-            cover_image: 'test',
-            description: '. . . Blip Borg. These robotZ are ready to take control of the galaxy with their flashy style and can-do attitude! Well, that and their laser vision . . .',
             rank: 1
         },
         {
+            name: 'robotZ',
+            profile_image: 'https://i.imgur.com/Z2s6VE8.png',
+            cover_image: 'https://i.imgur.com/igf2C1a.png',
+            description: '. . . Blip Borg. These robotZ are ready to take control of the galaxy with their flashy style and can-do attitude! Well, that and their laser vision . . .',
+            rank: 2
+        },
+        {
             name: 'Dull Chimp Boat Frat',
-            profile_image: 'test',
-            cover_image: 'test',
+            profile_image: 'https://i.imgur.com/CJCbpXK.png',
             description: `Just chimps smokin' stogies, sailing boats, having a dull time, ya dig?`,
+            rank: 4
+        },
+        {
+            name: 'The Shop of David',
+            profile_image: 'https://i.imgur.com/exCccJM.png',
+            description: `We only sell Davids here. The same picture of Dave over and over and over again. Don't ask for other pictures, alright? What, you're not happy with this masterpiece? It's like something Michelangelo carved outta stone. Da Vinci and Cellini fans can GTFO.`,
             rank: 3
         }
     
@@ -41,6 +47,7 @@ const createReviews = async () => {
     const battleDucks = await Shop.find({ name: 'BATTLEDUCKS'})
     const robotz = await Shop.find({ name: 'robotZ'})
     const dullChimps = await Shop.find({ name: 'Dull Chimp Boat Frat'})
+    const david = await Shop.find({ name: 'The Shop of David'})
 
     const reviews = [
         {
@@ -71,6 +78,7 @@ const createOwners = async () => {
     const battleDucks = await Shop.find({ name: 'BATTLEDUCKS'})
     const robotz = await Shop.find({ name: 'robotZ'})
     const dullChimps = await Shop.find({ name: 'Dull Chimp Boat Frat'})
+    const david = await Shop.find({ name: 'The Shop of David'})
 
     const owners = [
         {
@@ -89,51 +97,333 @@ const createOwners = async () => {
             profile_image: robotz[0].profile_image
         },
         {
-            _id: dullChimps[0]._id,
+            _id: mongoose.Types.ObjectId(dullChimps[0]._id),
             name: dullChimps[0].name,
             profile_image: dullChimps[0].profile_image
+        },
+        {
+            _id: mongoose.Types.ObjectId(david[0]._id),
+            name: david[0].name,
+            profile_image: david[0].profile_image
         },
 
     ]
     await Owner.create(owners);
-    console.log('Created an owner!');
+    console.log('Created some owners!');
     return owners;
 }
 
 const createNFTs = async () => {
 
     const battleDucks = await Shop.find({ name: 'BATTLEDUCKS'})
+    const david = await Shop.find({ name: 'The Shop of David'})
     const robotz = await Shop.find({ name: 'robotZ'})
     const dullChimps = await Shop.find({ name: 'Dull Chimp Boat Frat'})
 
     const nfts = [
         {
-            name: 'Test NFT 1',
-            image: 'https://i.imgur.com/83OmhBW.png',
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/4LZDfW1.png',
             price: 0.5,
-            description: ' Test Description 1',
+            description: 'Angry Brown Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/i1gTDs1.png',
+            price: 0.5,
+            description: 'Unamused Green Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/0YZ7xqz.png',
+            price: 0.5,
+            description: 'Unamused Brown Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/APXgb0o.png',
+            price: 0.5,
+            description: '420 Mallard Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/mK2JI7f.png',
+            price: 0.5,
+            description: 'Cool Yellow Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/jlg4EeW.png',
+            price: 0.5,
+            description: 'Bat Duck',
             shop_id: battleDucks[0]._id,
             owner_id: battleDucks[0]._id,
             featured: true
 
         },
         {
-            name: 'Test NFT 2',
-            image: 'https://i.imgur.com/FPTcVj9.png',
-            price: 1.5,
-            description: ' Test Description 2',
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/a8Cm6gf.png',
+            price: 0.5,
+            description: 'Blue Party Hat Blue Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/hYcMda8.png',
+            price: 0.5,
+            description: 'Groovy White Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/y0eE9w0.png',
+            price: 0.5,
+            description: 'Content Green Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/4jrcAZN.png',
+            price: 0.5,
+            description: 'Normal Yellow Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/EJrdvyv.png',
+            price: 0.5,
+            description: 'Frustrated Blue Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/UgcGWfx.png',
+            price: 0.5,
+            description: 'Green Party Hat Gray Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/UphNRKb.png',
+            price: 0.5,
+            description: 'Suspicious Blue Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/JSAVHVF.png',
+            price: 0.5,
+            description: 'Whitey',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/Lbwrx4Z.png',
+            price: 0.5,
+            description: 'Greaser Gray Duck',
+            shop_id: battleDucks[0]._id,
+            owner_id: battleDucks[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: 'Dave being Dave',
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: 'David the Conquerer',
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: 'Dave is #1!',
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `You don't like David I don't like You`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `Yass David!`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `Eww David!`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: true
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `DAV`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `My name's Dave`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `Dave's da best`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/exCccJM.png',
+            price: 0.5,
+            description: `F*#$ Goliath`,
+            shop_id: david[0]._id,
+            owner_id: david[0]._id,
+            featured: false
+
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/1Ij2tG0.png',
+            price: 1.0,
+            description: 'Blue Bot',
             shop_id: robotz[0]._id,
             owner_id: robotz[0]._id,
             featured: true
         },
         {
-            name: 'Test NFT 3',
-            image: 'https://i.imgur.com/toYd9dP.png',
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/Z2s6VE8.png',
+            price: 1.0,
+            description: 'Red Bot',
+            shop_id: robotz[0]._id,
+            owner_id: robotz[0]._id,
+            featured: false
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/m9ZwigV.png',
+            price: 1.0,
+            description: 'Green Bot',
+            shop_id: robotz[0]._id,
+            owner_id: robotz[0]._id,
+            featured: false
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/09jsAjG.png',
+            price: 1.0,
+            description: 'Yellow Bot',
+            shop_id: robotz[0]._id,
+            owner_id: robotz[0]._id,
+            featured: false
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/09jsAjG.png',
+            price: 1.0,
+            description: 'Lavender Bot',
+            shop_id: robotz[0]._id,
+            owner_id: robotz[0]._id,
+            featured: false
+        },
+        {
+            name: (Math.floor(Math.random()*10000)+ 1).toString(),
+            image: 'https://i.imgur.com/CJCbpXK.png',
             price: 10,
-            description: ' Test Description 3',
+            description: ' Dull Chimp Captain Hat and Cigar',
             shop_id: dullChimps[0]._id,
             owner_id: dullChimps[0]._id,
-            featured: true
+            featured: false
         }
     ]
     await NFT.insertMany(nfts);

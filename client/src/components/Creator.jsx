@@ -14,7 +14,7 @@ const Creator = () => {
     let navigate = useNavigate();
 
     const getOwner = async () => {
-        const res = await axios.get('http://localhost:3001/owner/0000004d33e223a7bab70e6e')
+        const res = await axios.get('http://localhost:3001/owner/0000004d358c79bf5043adf5')
         setOwner(res.data.owner)
     }
 

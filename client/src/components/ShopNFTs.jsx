@@ -37,9 +37,6 @@ const ShopNFTs = (props) => {
                             <div className="nft-name-container">
                                 <p className="nft-name">{ nft.name }</p>
                             </div>
-                            <div className="nft-price-container">
-                                <p className="nft-price">{ nft.price } ETH</p>
-                            </div>
                         </div>
                     )
                 })

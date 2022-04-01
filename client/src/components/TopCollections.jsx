@@ -28,7 +28,7 @@ const TopCollections = () => {
                 shops.map((shop) => {
                     console.log(shop);
                     return(
-                        <div className="top-collections-item" key={ shop._id } style={{ backgroundImage: `url(${shop.cover_image})`}} onClick={() => goToShop(shop)}>
+                        <div className="top-collections-item" key={ shop._id } style={{ backgroundImage: `url(${shop.cover_image})`, objectFit: 'cover', backgroundRepeat: 'no-repeat'}} onClick={() => goToShop(shop)}>
                             <div className="top-collections-image-container">
                                 <p className="top-collections-rank">Rank: {shop.rank}</p>
                                 <img className="shop-profile-image" src={shop.profile_image} alt={`can't display image`} />
