@@ -51,9 +51,9 @@ const createReviews = async () => {
 
     const reviews = [
         {
-            name: 'Duck Boy',
-            rating: 5,
-            content: 'Kinda cool pretty lame',
+            "name": "Duck Boy",
+            "rating": 5,
+            "content": "Kinda cool pretty lame",
             shop_id: battleDucks[0]._id
         },
         {
