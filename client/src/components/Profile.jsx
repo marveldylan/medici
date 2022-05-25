@@ -7,7 +7,7 @@ const Profile = () => {
     const [owner, setOwner] = useState({})
 
     const getOwner = async () => {
-        const res = await axios.get('/owner/0000004deb629f9dfaa9858b)
+        const res = await axios.get('/owner/0000004deb629f9dfaa9858b')
         setOwner(res.data.owner)
     }
 
