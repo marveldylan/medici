@@ -9,7 +9,7 @@ const RightSidebar = (props) => {
     const [owner, setOwner] = useState({})
 
     const getOwner = async () => {
-        const res = await axios.get('/owner/0000004d643cdabc9a60454a')
+        const res = await axios.get('/owner/0000004d358c79bf5043adf5')
         setOwner(res.data.owner)
     }
 

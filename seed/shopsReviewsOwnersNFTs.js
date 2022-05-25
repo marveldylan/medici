@@ -84,7 +84,7 @@ const createOwners = async () => {
         {
             _id: mongoose.Types.ObjectId(77),
             name: 'Dylan Marvel',
-            profile_image: 'https://media-exp1.licdn.com/dms/image/D4D03AQEaryWMxklntQ/profile-displayphoto-shrink_200_200/0/1648671159140?e=1654128000&v=beta&t=JvpwzF7aYOGA00g4jpEfjspIkSlkj_-3tImzB_YM5Gg'
+            profile_image: 'https://i.imgur.com/QOU4jdA.png'
         },
         {
             _id: mongoose.Types.ObjectId(battleDucks[0]._id),
